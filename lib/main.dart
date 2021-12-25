@@ -40,7 +40,7 @@ class HelloConvexAppBar extends StatelessWidget {
         items: [
           TabItem(icon: Icons.home,title:'Home'),
           TabItem(icon: Icons.add),
-          TabItem(icon: Icons.people,title:'Profile'),
+          TabItem(icon: Icons.people,title:'Profilee'),
         ],
        
       ),

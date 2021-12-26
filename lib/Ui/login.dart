@@ -34,21 +34,25 @@ class _LoginScreenState extends State<LoginScreen> {
                     Container(
                       height: double.infinity,
                       width: double.infinity,
-                      color: Colors.grey[200],
+                      color: Colors.white,
                       child: SingleChildScrollView(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                            EdgeInsets.fromLTRB(24.0, 100.0, 24.0, 0),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Sign In",
+                              "Login to your\naccount",
                               style: TextStyle(
-                                  fontSize: 50,
+                                  fontSize: 28,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(height: 30),
+                            SizedBox(height: 20),
+                            Image.asset('assets/images/accent.png',
+                            width: 99,
+                            height: 10),
+                            SizedBox(height: 50),
                             TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               onChanged: (value) {
@@ -56,38 +60,39 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Email";
+                                  return "Please enter your Email";
                                 }
                               },
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.start,
                               decoration: kTextFieldDecoration.copyWith(
                                 hintText: 'Email',
                                 prefixIcon: Icon(
                                   Icons.email,
-                                  color: Colors.black,
+                                  color: Colors.blueGrey,
                                 ),
                               ),
                             ),
                             SizedBox(height: 30),
                             TextFormField(
+                            
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Please enter your Password";
                                 }
                               },
                               onChanged: (value) {
                                 password = value;
                               },
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.start,
                               decoration: kTextFieldDecoration.copyWith(
                                   hintText: 'Password',
                                   prefixIcon: Icon(
                                     Icons.lock,
-                                    color: Colors.black,
+                                    color: Colors.blueGrey,
                                   )),
                             ),
-                            SizedBox(height: 80),
+                            SizedBox(height: 50),
                             LoginSignupButton(
                               title: 'Login',
                               ontapp: () async {
@@ -142,11 +147,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                 );
                               },
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     "Don't have an Account ?",
                                     style: TextStyle(
-                                        fontSize: 20, color: Colors.black87),
+                                        fontSize: 16, color: Colors.grey),
                                   ),
                                   SizedBox(width: 10),
                                   Hero(
@@ -154,9 +160,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                                                       child: Text(
                                       'Sign up',
                                       style: TextStyle(
-                                          fontSize: 21,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.black),
+                                          color: Colors.blue),
                                     ),
                                   )
                                 ],

@@ -22,7 +22,7 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, color: Colors.black,size: 30,),
@@ -42,24 +42,28 @@ class _SignupScreenState extends State<SignupScreen> {
                     Container(
                       height: double.infinity,
                       width: double.infinity,
-                     color: Colors.grey[200],
+                     color: Colors.white,
                       child: SingleChildScrollView(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                            EdgeInsets.fromLTRB(24.0, 40.0, 24.0, 0),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Hero(
                               tag: '1',
                                                           child: Text(
-                                "Sign up",
+                                "Register new\naccount",
                                 style: TextStyle(
-                                    fontSize: 30,
+                                    fontSize: 28,
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
-                            SizedBox(height: 30),
+                            SizedBox(height: 20),
+                            Image.asset('assets/images/accent.png',
+                            width: 99,
+                            height: 10),
+                            SizedBox(height: 50),
                             TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               onChanged: (value) {
@@ -68,12 +72,12 @@ class _SignupScreenState extends State<SignupScreen> {
                               validator: (value) => (value!.isEmpty)
                                   ? ' Please enter email'
                                   : null,
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.start,
                               decoration: kTextFieldDecoration.copyWith(
                                 hintText: 'Enter Your Email',
                                 prefixIcon: Icon(
                                   Icons.email,
-                                  color: Colors.black,
+                                  color: Colors.blueGrey,
                                 ),
                               ),
                             ),
@@ -88,15 +92,15 @@ class _SignupScreenState extends State<SignupScreen> {
                               onChanged: (value) {
                                 password = value;
                               },
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.start,
                               decoration: kTextFieldDecoration.copyWith(
                                   hintText: 'Choose a Password',
                                   prefixIcon: Icon(
                                     Icons.lock,
-                                    color: Colors.black,
+                                    color: Colors.blueGrey,
                                   )),
                             ),
-                            SizedBox(height: 80),
+                            SizedBox(height: 50),
                             LoginSignupButton(
                               title: 'Register',
                               ontapp: () async {

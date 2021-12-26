@@ -10,8 +10,9 @@ class LoginSignupButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      
       child: SizedBox(
-        height: 45,
+        height: 56,
         child: ElevatedButton(
           onPressed: 
             ontapp,
@@ -19,11 +20,11 @@ class LoginSignupButton extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               title,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 24),
             ),
           ),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.black45),
+            backgroundColor: MaterialStateProperty.all(Colors.blue[700]),
           ),
         ),
       ),

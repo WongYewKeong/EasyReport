@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_prototype/Component/button.dart';
+import 'package:flutter_prototype/Ui/onboarding.dart';
 import '../constants.dart';
 import 'home.dart';
 import 'register.dart';
+import './onboarding.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -106,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                                     await Navigator.of(context).push(
                                       MaterialPageRoute(
-                                        builder: (contex) => HomeScreen(),
+                                        builder: (contex) => OnBoardingScreen(),
                                       ),
                                     );
 

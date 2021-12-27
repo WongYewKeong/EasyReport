@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter your Email";
+                                  return "Please enter your email";
                                 }
                               },
                               textAlign: TextAlign.start,
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter your Password";
+                                  return "Please enter your password";
                                 }
                               },
                               onChanged: (value) {
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title: Text("Ops! Login Failed"),
+                                        title: Text("Login Failed"),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(

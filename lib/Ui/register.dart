@@ -25,7 +25,7 @@ class _SignupScreenState extends State<SignupScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: Colors.black,size: 30,),
+          icon: Icon(Icons.arrow_back_ios, color: Colors.black,size: 30),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -70,7 +70,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 email = value.toString().trim();
                               },
                               validator: (value) => (value!.isEmpty)
-                                  ? ' Please enter email'
+                                  ? ' Please enter your email'
                                   : null,
                               textAlign: TextAlign.start,
                               decoration: kTextFieldDecoration.copyWith(
@@ -86,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Please enter your password";
                                 }
                               },
                               onChanged: (value) {
@@ -133,7 +133,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                       context: context,
                                       builder: (ctx) => AlertDialog(
                                         title:
-                                            Text(' Ops! Registration Failed'),
+                                            Text('Registration Failed'),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(

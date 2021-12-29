@@ -18,16 +18,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return  WillPopScope(
       onWillPop: ()async=>false,
       child: Scaffold(
-      appBar: AppBar(title: const Text('Home'),automaticallyImplyLeading: false,
-        backgroundColor: Colors.blue),
       body: _pageOptions[selectedPage],
       bottomNavigationBar: ConvexAppBar(
         style: TabStyle.fixedCircle,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.lightBlue,
         items: [
           TabItem(icon: Icons.home,title:'Home'),
           TabItem(icon: Icons.add),
-          TabItem(icon: Icons.people,title:'Profile'),
+          TabItem(icon: Icons.person,title:'Profile'),
         ],
        
        initialActiveIndex: 0,

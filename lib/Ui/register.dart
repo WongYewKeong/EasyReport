@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_prototype/Component/button.dart';
 
 import '../constants.dart';
-import 'login.dart';
+
 
 class SignupScreen extends StatefulWidget {
   @override

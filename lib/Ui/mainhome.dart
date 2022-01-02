@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_prototype/Ui/reportstatus.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 
@@ -57,9 +58,12 @@ class Home extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        // Perform some action
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>ReportStatus()),
+                      );
                       },
-                      child: const Text('View Details'),
+                      child: const Text('Track Status'),
                     ),
                     
                   ],
@@ -95,9 +99,12 @@ class Home extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        // Perform some action
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>ReportStatus()),
+                      );
                       },
-                      child: const Text('View Details'),
+                      child: const Text('Track Status'),
                     ),
                     
                   ],
@@ -133,9 +140,12 @@ class Home extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        // Perform some action
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>ReportStatus()),
+                      );
                       },
-                      child: const Text('View Details'),
+                      child: const Text('Track Status'),
                     ),
                     
                   ],

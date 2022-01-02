@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_prototype/Component/button.dart';
 import 'package:flutter_prototype/Ui/onboarding.dart';
 import '../constants.dart';
-import 'home.dart';
 import 'register.dart';
 import './onboarding.dart';
 

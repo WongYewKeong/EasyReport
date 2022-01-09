@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_prototype/Ui/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_prototype/Component/profile_menu.dart';
+import 'package:flutter_prototype/Ui/setting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+const String _url='https://www.kkr.gov.my/ms/Soalan-Lazim-KKR';
 
 _signOut() async {
   await _firebaseAuth.signOut();
+}
+
+void _launchURL() async {
+  if (!await launch(_url)) throw 'Could not launch $_url';
 }
 
 class Profile extends StatelessWidget {
@@ -85,12 +92,18 @@ Padding(
           ProfileMenu(
             text: "Settings",
             icon: "assets/icons/Settings.svg",
-            press: () {},
+            press: () {
+              Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SettingScreen()));
+            },
           ),
           ProfileMenu(
             text: "Help Center",
             icon: "assets/icons/Question mark.svg",
-            press: () {},
+            press: () {
+              _launchURL();
+            },
           ),
           ProfileMenu(
             text: "Log Out",

@@ -2,7 +2,9 @@
     package="com.example.flutter_prototype"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
    <application
         android:label="flutter_prototype"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +33,7 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -41,5 +44,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        
+        <meta-data 
+          android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyC9e8Q6n3JGh8o4I5z_Cdsez-N65uckNEs"
+          />
     </application>
 </manifest>

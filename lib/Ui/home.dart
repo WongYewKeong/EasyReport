@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter_prototype/Ui/mainhome.dart';
-import 'package:flutter_prototype/Ui/report.dart';
+import 'package:flutter_prototype/Ui/mymap.dart';
 import 'package:flutter_prototype/Ui/profile.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedPage=0;
-  final _pageOptions=[Home(),Report(),Profile()];
+  final _pageOptions=[Home(),MapSample(),Profile()];
   @override
   Widget build(BuildContext context) {
     return  WillPopScope(

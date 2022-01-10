@@ -8,7 +8,7 @@ class OnBoardingScreen extends StatelessWidget {
           child: IntroductionScreen(
         pages: [
           PageViewModel(
-              title: 'Welcome to Report App',
+              title: 'Welcome to EasyReport App',
               body:
                   'A easy and quick solution to report infrastructure breakdown.',
               image: buildImage('assets/images/introduction0.jpg')),

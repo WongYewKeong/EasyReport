@@ -46,6 +46,9 @@ dependencies:
   google_maps_flutter: ^2.1.1
   http: ^0.13.4
   image_picker: ^0.8.4+4
+  url_launcher: ^6.0.17
+  flutter_settings_ui: ^2.0.1
+  badges: ^2.0.2
   
 
 dev_dependencies:

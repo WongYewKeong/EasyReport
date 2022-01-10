@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_prototype/Ui/account_verify.dart';
 import 'package:flutter_prototype/Ui/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_prototype/Component/profile_menu.dart';
@@ -87,7 +88,11 @@ Padding(
           ProfileMenu(
             text: "Account Verification",
             icon: "assets/icons/verified.svg",
-            press: () {},
+            press: () {
+              Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AccountVerify()));
+            },
           ), 
           ProfileMenu(
             text: "Settings",

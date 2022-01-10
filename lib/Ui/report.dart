@@ -13,7 +13,7 @@ class _ReportState extends State<Report> {
   TextEditingController textController = TextEditingController();
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final breakdownCategories = [
-    'Porthole',
+    'Pothole',
     'Traffic Light',
     'Drainage',
     'Signboard',
@@ -83,7 +83,7 @@ class _ReportState extends State<Report> {
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
             prefixIcon: Icon(Icons.notes),
-            hintText: 'A porthole found at...',
+            hintText: 'A pothole found at...',
             labelText: 'Description',
             border: OutlineInputBorder()),
       );

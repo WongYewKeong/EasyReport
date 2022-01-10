@@ -52,5 +52,5 @@ class OnBoardingScreen extends StatelessWidget {
       Center(child: Image.asset(path, width: 350));
 
   void goToHome(context) => Navigator.of(context)
-      .pushReplacement(MaterialPageRoute(builder: (_) => HomeScreen()));
+      .push(MaterialPageRoute(builder: (_) => HomeScreen()));
 }

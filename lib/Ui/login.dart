@@ -105,9 +105,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     await _auth.signInWithEmailAndPassword(
                                         email: email, password: password);
 
-                                    await Navigator.of(context).push(
+                                    await Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (contex) => OnBoardingScreen(),
+                                        builder: (context) => OnBoardingScreen(),
                                       ),
                                     );
 
